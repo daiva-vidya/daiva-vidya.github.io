@@ -32,6 +32,7 @@
     --line: rgba(169,121,31,0.28);
     --radius: 2px;
     --maxw: 1080px;
+    --maxw-nav: 1400px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -54,6 +55,7 @@
   }
   .devanagari{ font-family:'Tiro Devanagari Sanskrit', serif; }
   .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+  .topnav-wrap{ max-width:var(--maxw-nav); margin:0 auto; padding:0 28px; }
   .eyebrow{
     text-transform:uppercase;
     letter-spacing:0.22em;
@@ -174,7 +176,7 @@
     align-items:center;
     justify-content:flex-end;
     flex-wrap:wrap;
-    gap:16px 28px;
+    gap:16px 22px;
   }
   .topnav-logo{
     font-family:'Calibri','Carlito',sans-serif;
@@ -190,7 +192,7 @@
   .topnav-links{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:20px;
     flex-wrap:wrap;
   }
   .topnav-link{
@@ -795,7 +797,7 @@
 <body>
 
 <nav class="topnav">
-  <div class="wrap topnav-inner">
+  <div class="topnav-wrap topnav-inner">
     <a class="topnav-logo" href="#top">Дайва Видья</a>
     <div class="topnav-right">
       <div class="topnav-links">
