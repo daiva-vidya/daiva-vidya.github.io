@@ -169,6 +169,13 @@
     padding:16px 0;
     flex-wrap:wrap;
   }
+  .topnav-right{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:16px 28px;
+  }
   .topnav-logo{
     font-family:'Calibri','Carlito',sans-serif;
     font-weight:700;
@@ -215,7 +222,6 @@
   }
   .topnav-lang{
     position:relative;
-    margin-left:4px;
   }
   .topnav-lang-btn{
     display:flex;
@@ -274,8 +280,8 @@
   .topnav-lang-option-soon{ opacity:0.5; cursor:default; }
   @media (max-width:760px){
     .topnav-inner{ justify-content:center; text-align:center; }
+    .topnav-right{ justify-content:center; }
     .topnav-links{ justify-content:center; gap:14px 20px; }
-    .topnav-lang{ margin-left:0; }
   }
 
   /* ---------- RASHI CHAKRA SIGNATURE ---------- */
@@ -791,24 +797,26 @@
 <nav class="topnav">
   <div class="wrap topnav-inner">
     <a class="topnav-logo" href="#top">Дайва Відья</a>
-    <div class="topnav-links">
-      <a class="topnav-link" href="#news">Новини школи</a>
-      <a class="topnav-link" href="#teacher">Викладач</a>
-      <a class="topnav-link" href="#program">Програма навчання</a>
-      <a class="topnav-link" href="#daiva-chakra">Daiva Chakra</a>
-      <a class="topnav-link" href="#contact">Контакти</a>
-      <a class="topnav-link" href="#reviews">Відгуки</a>
-    </div>
-    <div class="topnav-lang" id="lang-switcher">
-      <button type="button" class="topnav-lang-btn" id="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
-        <span>Мова - українська</span>
-        <svg class="topnav-lang-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <ul class="topnav-lang-menu" id="lang-switcher-menu">
-        <li><a href="index.html" class="topnav-lang-option" data-lang="ru">Русский</a></li>
-        <li><a href="index-uk.html" class="topnav-lang-option is-active" data-lang="uk">Українська</a></li>
-        <li><a href="#" class="topnav-lang-option topnav-lang-option-soon" title="Незабаром">English</a></li>
-      </ul>
+    <div class="topnav-right">
+      <div class="topnav-links">
+        <a class="topnav-link" href="#news">Новини школи</a>
+        <a class="topnav-link" href="#teacher">Викладач</a>
+        <a class="topnav-link" href="#program">Програма навчання</a>
+        <a class="topnav-link" href="#daiva-chakra">Daiva Chakra</a>
+        <a class="topnav-link" href="#contact">Контакти</a>
+        <a class="topnav-link" href="#reviews">Відгуки</a>
+      </div>
+      <div class="topnav-lang" id="lang-switcher">
+        <button type="button" class="topnav-lang-btn" id="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+          <span>Мова - українська</span>
+          <svg class="topnav-lang-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="topnav-lang-menu" id="lang-switcher-menu">
+          <li><a href="index.html" class="topnav-lang-option" data-lang="ru">Русский</a></li>
+          <li><a href="index-uk.html" class="topnav-lang-option is-active" data-lang="uk">Українська</a></li>
+          <li><a href="#" class="topnav-lang-option topnav-lang-option-soon" title="Незабаром">English</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
