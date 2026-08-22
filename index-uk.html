@@ -54,7 +54,7 @@
   }
   .devanagari{ font-family:'Tiro Devanagari Sanskrit', serif; }
   .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
-  .topnav-wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+  .topnav-wrap{ max-width:none; width:100%; margin:0 auto; padding:0 28px; box-sizing:border-box; }
   .eyebrow{
     text-transform:uppercase;
     letter-spacing:0.22em;
@@ -165,8 +165,8 @@
   .topnav-inner{
     display:flex;
     align-items:center;
-    justify-content:flex-start;
-    gap:24px;
+    justify-content:center;
+    gap:40px;
     padding:16px 0;
     flex-wrap:wrap;
   }
@@ -175,7 +175,7 @@
     align-items:center;
     justify-content:flex-end;
     flex-wrap:wrap;
-    gap:12px 16px;
+    gap:16px 28px;
   }
   .topnav-logo{
     font-family:'Calibri','Carlito',sans-serif;
@@ -191,16 +191,16 @@
   .topnav-links{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:28px;
     flex-wrap:wrap;
   }
   .topnav-link{
     position:relative;
     font-family:'Calibri','Carlito',sans-serif;
     font-weight:600;
-    font-size:0.82rem;
+    font-size:0.95rem;
     text-transform:uppercase;
-    letter-spacing:0.03em;
+    letter-spacing:0.08em;
     color:var(--ink);
     text-decoration:none;
     padding-bottom:4px;
@@ -227,16 +227,16 @@
   .topnav-lang-btn{
     display:flex;
     align-items:center;
-    gap:6px;
+    gap:7px;
     background:transparent;
     border:1px solid var(--line);
     border-radius:999px;
-    padding:6px 12px;
+    padding:7px 14px;
     font-family:'Calibri','Carlito',sans-serif;
     font-weight:600;
-    font-size:0.78rem;
+    font-size:0.85rem;
     text-transform:uppercase;
-    letter-spacing:0.04em;
+    letter-spacing:0.06em;
     color:var(--ink);
     cursor:pointer;
   }
