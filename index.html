@@ -2,6 +2,15 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<script>
+  (function(){
+    try {
+      var saved = localStorage.getItem('dv_lang');
+      if (saved === 'uk') { location.replace('index-uk.html' + location.search + location.hash); }
+      else if (saved === 'en') { location.replace('index-en.html' + location.search + location.hash); }
+    } catch(e){}
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="/favicon.png">
 <title>Дайва Видья — Школа Ведической Астрологии и Хиромантии Вячеслава Ковальчука</title>
@@ -204,9 +213,69 @@
     color:var(--ink);
     cursor:default;
   }
+  .topnav-lang{
+    position:relative;
+    margin-left:4px;
+  }
+  .topnav-lang-btn{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:7px 14px;
+    font-family:'Calibri','Carlito',sans-serif;
+    font-weight:600;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink);
+    cursor:pointer;
+  }
+  .topnav-lang-btn:hover{ border-color:var(--gold); color:var(--gold); }
+  .topnav-lang-caret{ transition:transform .15s ease; flex:none; }
+  .topnav-lang.open .topnav-lang-caret{ transform:rotate(180deg); }
+  .topnav-lang-menu{
+    position:absolute;
+    top:calc(100% + 8px);
+    right:0;
+    min-width:170px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.14);
+    padding:6px;
+    margin:0;
+    list-style:none;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-6px);
+    transition:opacity .15s ease, transform .15s ease, visibility .15s;
+    z-index:200;
+  }
+  .topnav-lang.open .topnav-lang-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+  .topnav-lang-option{
+    display:block;
+    padding:9px 12px;
+    border-radius:6px;
+    font-family:'Calibri','Carlito',sans-serif;
+    font-size:0.93rem;
+    color:var(--ink);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .topnav-lang-option:hover{ background:var(--bg-alt); color:var(--gold); }
+  .topnav-lang-option.is-active{ color:var(--gold); font-weight:700; }
+  .topnav-lang-option-soon{ opacity:0.5; cursor:default; }
   @media (max-width:760px){
     .topnav-inner{ justify-content:center; text-align:center; }
     .topnav-links{ justify-content:center; gap:14px 20px; }
+    .topnav-lang{ margin-left:0; }
   }
 
   /* ---------- RASHI CHAKRA SIGNATURE ---------- */
@@ -729,6 +798,17 @@
       <a class="topnav-link" href="#daiva-chakra">Daiva Chakra</a>
       <a class="topnav-link" href="#contact">Контакты</a>
       <a class="topnav-link" href="#reviews">Отзывы</a>
+    </div>
+    <div class="topnav-lang" id="lang-switcher">
+      <button type="button" class="topnav-lang-btn" id="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+        <span>Язык - русский</span>
+        <svg class="topnav-lang-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <ul class="topnav-lang-menu" id="lang-switcher-menu">
+        <li><a href="index.html" class="topnav-lang-option is-active" data-lang="ru">Русский</a></li>
+        <li><a href="index-uk.html" class="topnav-lang-option" data-lang="uk">Українська</a></li>
+        <li><a href="#" class="topnav-lang-option topnav-lang-option-soon" title="Скоро">English</a></li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -2247,6 +2327,34 @@ voronsk@mail.ru.</p>
   </div>
 </footer>
 
+<script>
+  (function(){
+    var langBox = document.getElementById('lang-switcher');
+    var langBtn = document.getElementById('lang-switcher-btn');
+    if (langBox && langBtn){
+      function closeLang(){ langBox.classList.remove('open'); langBtn.setAttribute('aria-expanded','false'); }
+      langBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var isOpen = langBox.classList.toggle('open');
+        langBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e){
+        if (!langBox.contains(e.target)) closeLang();
+      });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') closeLang();
+      });
+      langBox.querySelectorAll('.topnav-lang-option-soon').forEach(function(el){
+        el.addEventListener('click', function(e){ e.preventDefault(); });
+      });
+      langBox.querySelectorAll('.topnav-lang-option[data-lang]').forEach(function(el){
+        el.addEventListener('click', function(){
+          try { localStorage.setItem('dv_lang', el.getAttribute('data-lang')); } catch(e){}
+        });
+      });
+    }
+  })();
+</script>
 <script>
   (function(){
     var overlay = document.getElementById('contact-modal-overlay');
