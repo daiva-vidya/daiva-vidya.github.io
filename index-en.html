@@ -2281,50 +2281,50 @@ voronsk@mail.ru.</p>
 <section id="contact">
   <div class="wrap contact-grid">
     <div>
-      <span class="eyebrow">Зв'язок</span>
-      <h2>Задати запитання, записатися на консультацію або навчання</h2>
+      <span class="eyebrow">Contact</span>
+      <h2>Ask a question, book a consultation, or sign up for classes</h2>
       <ul class="contact-list">
-        <li>Пошта <a href="mailto:voronsk@mail.ru" class="copy-link" data-copy="voronsk@mail.ru">voronsk@mail.ru</a></li>
-        <li>Телефон / Viber / Telegram / WhatsApp <a href="tel:+380969726521" class="copy-link" data-copy="+380 96 972 65 21">+380 96 972 65 21</a></li>
+        <li>Email <a href="mailto:voronsk@mail.ru" class="copy-link" data-copy="voronsk@mail.ru">voronsk@mail.ru</a></li>
+        <li>Phone / Viber / Telegram / WhatsApp <a href="tel:+380969726521" class="copy-link" data-copy="+380 96 972 65 21">+380 96 972 65 21</a></li>
       </ul>
       <div class="news-actions" style="margin-top:24px;">
-        <button type="button" class="btn btn-primary contact-form-trigger">Написати повідомлення</button>
+        <button type="button" class="btn btn-primary contact-form-trigger">Send a message</button>
       </div>
       <div class="social-row">
         <a href="https://www.youtube.com/channel/UCCaMYoCLJhjauY1EhusFPhg" target="_blank" rel="noopener">YouTube</a>
         <a href="https://www.facebook.com/vyacheslav.kovalchuk.7/" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://vk.com/id68865896" target="_blank" rel="noopener">ВКонтакте</a>
+        <a href="https://vk.com/id68865896" target="_blank" rel="noopener">VKontakte</a>
         <a href="https://www.instagram.com/vyacheslav.kovalchuk.astrolog/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://t.me/+5GJas85DGy1mNWIy" target="_blank" rel="noopener">Telegram</a>
       </div>
     </div>
     <div>
-      <span class="eyebrow">Наш сайт</span>
-      <h2>Хіромантія і Ведична Астрологія</h2>
-      <p style="color:var(--muted); font-size:1.13rem;">Сайт присвячений Джйотіш і Самудриці (знанню про лінії і форму руки). Ведичним писанням, пошуку своєї Дхарми і самопізнанню.</p>
+      <span class="eyebrow">Our site</span>
+      <h2>Palmistry and Vedic Astrology</h2>
+      <p style="color:var(--muted); font-size:1.13rem;">This site is dedicated to Jyotish and Samudrika (the science of the hand's lines and shape), to Vedic scripture, and to finding your Dharma and knowing yourself.</p>
     </div>
   </div>
 </section>
 
 <div class="modal-overlay" id="contact-modal-overlay">
   <div class="modal-box" style="font-size: 18px;">
-    <button type="button" class="modal-close" id="contact-modal-close" aria-label="Закрити" style="font-size: 20px;">×</button>
-    <h3 style="font-size: 24px;">Написати повідомлення</h3>
-        <p class="modal-note" style="font-size: 16px;">Заповніть форму, і ми отримаємо ваше повідомлення.</p>
+    <button type="button" class="modal-close" id="contact-modal-close" aria-label="Close" style="font-size: 20px;">×</button>
+    <h3 style="font-size: 24px;">Send a message</h3>
+        <p class="modal-note" style="font-size: 16px;">Fill out the form and we'll get your message.</p>
     <form id="contact-modal-form">
       <div class="form-field" style="font-size: 16px;">
-        <label for="cf-name" style="font-size: 16px;">Ім'я</label>
+        <label for="cf-name" style="font-size: 16px;">Name</label>
         <input type="text" id="cf-name" name="name" required style="font-size: 16px;">
       </div>
       <div class="form-field" style="font-size: 16px;">
-        <label for="cf-email" style="font-size: 16px;">Email для відповіді</label>
+        <label for="cf-email" style="font-size: 16px;">Email for reply</label>
         <input type="email" id="cf-email" name="email" required style="font-size: 16px;">
       </div>
       <div class="form-field" style="font-size: 16px;">
-        <label for="cf-message" style="font-size: 16px;">Повідомлення</label>
+        <label for="cf-message" style="font-size: 16px;">Message</label>
         <textarea id="cf-message" name="message" required style="font-size: 16px;"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" style="font-size: 18px;">Надіслати</button>
+      <button type="submit" class="btn btn-primary" style="font-size: 18px;">Send</button>
     </form>
   </div>
 </div>
@@ -2332,7 +2332,7 @@ voronsk@mail.ru.</p>
 <footer>
   <div class="wrap">
     <div class="mantra devanagari">ॐ श्री भृगुगुरवे नमः</div>
-    <div class="copy">Харі Ом Тат Сат! · Школа «Дайва Відья» · Джйотіш і Хіромантія</div>
+    <div class="copy">Hari Om Tat Sat! · Daiva Vidya School · Jyotish and Palmistry</div>
   </div>
 </footer>
 
@@ -2385,7 +2385,7 @@ voronsk@mail.ru.</p>
         e.preventDefault();
         var submitBtn = form.querySelector('button[type="submit"]');
         var originalText = submitBtn ? submitBtn.textContent : '';
-        if (submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Відправка...'; }
+        if (submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
 
         var formData = new FormData(form);
 
@@ -2397,12 +2397,12 @@ voronsk@mail.ru.</p>
           if (response.ok){
             form.reset();
             closeModal();
-            alert('Повідомлення надіслано! Ми скоро з Вами зв\'яжемося.');
+            alert('Message sent! We will get back to you soon.');
           } else {
-            alert('Не вдалося надіслати повідомлення. Спробуйте пізніше або напишіть на daivachakra@gmail.com');
+            alert('Failed to send the message. Please try again later or email daivachakra@gmail.com');
           }
         }).catch(function(){
-          alert('Не вдалося надіслати повідомлення. Перевірте підключення до інтернету.');
+          alert('Failed to send the message. Please check your internet connection.');
         }).finally(function(){
           if (submitBtn){ submitBtn.disabled = false; submitBtn.textContent = originalText; }
         });
@@ -2430,7 +2430,7 @@ voronsk@mail.ru.</p>
   (function(){
     var toast = document.createElement('div');
     toast.className = 'copy-toast';
-    toast.textContent = 'Скопійовано';
+    toast.textContent = 'Copied';
     document.body.appendChild(toast);
     var toastTimer;
     function showToast(){
