@@ -279,10 +279,14 @@
   .topnav-lang-option:hover{ background:var(--bg-alt); color:var(--gold); }
   .topnav-lang-option.is-active{ color:var(--gold); font-weight:700; }
   .topnav-lang-option-soon{ opacity:0.5; cursor:default; }
+  .topnav-lang-short{ display:none; }
   @media (max-width:760px){
     .topnav-inner{ justify-content:center; text-align:center; }
     .topnav-right{ justify-content:center; }
     .topnav-links{ justify-content:center; gap:14px 20px; }
+    .topnav-lang-btn{ padding:6px 10px; font-size:0.78rem; gap:5px; }
+    .topnav-lang-full{ display:none; }
+    .topnav-lang-short{ display:inline; }
   }
 
   /* ---------- RASHI CHAKRA SIGNATURE ---------- */
@@ -806,17 +810,18 @@
         <a class="topnav-link" href="#daiva-chakra">Daiva Chakra</a>
         <a class="topnav-link" href="#contact">Contact</a>
         <a class="topnav-link" href="#reviews">Reviews</a>
-      </div>
-      <div class="topnav-lang" id="lang-switcher">
-        <button type="button" class="topnav-lang-btn" id="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
-          <span>Language - English</span>
-          <svg class="topnav-lang-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="topnav-lang-menu" id="lang-switcher-menu">
-          <li><a href="index.html" class="topnav-lang-option" data-lang="ru">Русский</a></li>
-          <li><a href="index-uk.html" class="topnav-lang-option" data-lang="uk">Українська</a></li>
-          <li><a href="index-en.html" class="topnav-lang-option is-active" data-lang="en">English</a></li>
-        </ul>
+        <div class="topnav-lang" id="lang-switcher">
+          <button type="button" class="topnav-lang-btn" id="lang-switcher-btn" aria-haspopup="true" aria-expanded="false">
+            <span class="topnav-lang-full">Language - English</span>
+            <span class="topnav-lang-short">EN</span>
+            <svg class="topnav-lang-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="topnav-lang-menu" id="lang-switcher-menu">
+            <li><a href="index.html" class="topnav-lang-option" data-lang="ru">Русский</a></li>
+            <li><a href="index-uk.html" class="topnav-lang-option" data-lang="uk">Українська</a></li>
+            <li><a href="index-en.html" class="topnav-lang-option is-active" data-lang="en">English</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
